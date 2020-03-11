@@ -1,8 +1,12 @@
 # Unspringy Search
 
-This project aims at being able to search through plaintext JSON dumps of ElasticSearch database.
+This project aims at being able to search through plaintext JSON dumps of Elasticsearch database with a 'better grep' that is JSON aware.
 
-Using the sample `kibana_sample_data_logs` data set, imported with Kibana 7.6.1 into ElasticSeach 7.6.1, 
+It may not be always realistic to keep all access / application logs alive in an Elasticsearch cluster, so you may need to export them into a plain-text format and look through them later.
+
+Note: you could also ingest the logs back into ES for a better search experience
+
+Using the sample `kibana_sample_data_logs` data set, imported with Kibana 7.6.1 into Elasticsearch 7.6.1, 
 we 
 
 1. initially dump the data into a json file with `python index-export-json.py > kibana_sample_data_logs.json`
