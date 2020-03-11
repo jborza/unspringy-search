@@ -9,10 +9,11 @@ search = {'_source': {'excludes': ['geo', 'message', 'tags', 'event', 'phpmemory
 simple_search = {}
 
 #operate on a single file
-filename = 'logs_dataset_sorted.json'
+filename = 'elastic_long.json'
 
 def match(json, search):
-    if not (re.search('www.elastic.co', json['host'])):
+    # if not (re.search('www.elastic.co', json['host'])):
+    if not json['host'] == 'www.elastic.co':
         return False
     if not (re.search('Firefox',json['agent'])):
         return False
